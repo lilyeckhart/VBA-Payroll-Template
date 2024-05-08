@@ -13,5 +13,5 @@ A template using Macros/VBA in Excel to populate new sheets with data tables bas
 ![populated sheet](https://github.com/lilyeckhart/VBA-Payroll-Template/assets/64758489/db2331ac-9a91-487a-a9ed-1e3458150e27)
 
 
-- Source Code.
+- New sheets created with unique data.
 ![src code](https://github.com/lilyeckhart/VBA-Payroll-Template/assets/64758489/36388b67-97c0-4f98-8a5c-c6c095d41136)
