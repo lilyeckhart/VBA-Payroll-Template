@@ -1,0 +1,34 @@
+Sub CreateSheets()
+ 
+Dim rng As Range
+Dim cell As Range
+Dim tbl As ListObject
+Dim ws As Worksheet
+Dim tblrng As Range
+ 
+On Error GoTo Errorhandling
+ 
+Set rng = Application.InputBox(Prompt:="Select cell range:", _
+Title:="Create sheets", _
+Default:=Selection.Address, Type:=8)
+ 
+For Each cell In rng
+ 
+    If cell <> "" Then
+        Sheets.Add(After:=Sheets(Sheets.Count)).Name = cell
+    End If
+    
+Next cell
+
+For Each ws In ThisWorkbook.Worksheets
+    
+    If ws.Name <> "Lead" And ws.Name <> "PR" And ws.Name <> "W2" Then
+        Worksheets("Lead").Range("A1:T33").Copy
+        ws.Range("A1").PasteSpecial xlPasteAll
+    End If
+    
+Next ws
+ 
+Errorhandling:
+ 
+End Sub
